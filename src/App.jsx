@@ -4,6 +4,7 @@ import AnnotationTable from './components/AnnotationTable'
 import Header from './components/Header'
 import StatsPanel from './components/StatsPanel'
 import { FileText, AlertCircle } from 'lucide-react'
+import { logger } from './utils/logger'
 
 function App() {
   const [annotations, setAnnotations] = useState([])
@@ -72,7 +73,7 @@ function App() {
       }
 
     } catch (err) {
-      console.error('Error loading annotations:', err)
+      logger.error('Error loading annotations', err)
       setError(err.message)
       // Load sample data for demo
       loadSampleData()

@@ -1,9 +1,21 @@
 import React, { useRef, useEffect, useState } from 'react'
-import * as pdfjsLib from 'pdfjs-dist'
 import { AlertCircle, ZoomIn, ZoomOut, RotateCw } from 'lucide-react'
+import { logger } from '../utils/logger'
 
-// Configure PDF.js worker
-pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.js`
+// Lazy load PDF.js only when needed
+let pdfjsLib = null
+let pdfLoaded = false
+
+async function loadPdfJs() {
+  if (!pdfLoaded) {
+    const pdfjs = await import('pdfjs-dist')
+    pdfjsLib = pdfjs
+    // Configure PDF.js worker
+    pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.js`
+    pdfLoaded = true
+  }
+  return pdfjsLib
+}
 
 function PDFViewer({ annotation }) {
   const canvasRef = useRef(null)
@@ -29,10 +41,13 @@ function PDFViewer({ annotation }) {
     setError(null)
 
     try {
+      // Lazy load PDF.js library
+      const pdfjs = await loadPdfJs()
+
       // Load PDF (use cache if available)
       let pdf = pdfCache[filename]
       if (!pdf) {
-        const loadingTask = pdfjsLib.getDocument(filename)
+        const loadingTask = pdfjs.getDocument(filename)
         pdf = await loadingTask.promise
         setPdfCache(prev => ({ ...prev, [filename]: pdf }))
       }
@@ -73,7 +88,7 @@ function PDFViewer({ annotation }) {
       }
 
     } catch (err) {
-      console.error('Error rendering PDF:', err)
+      logger.error('Error rendering PDF', err)
       setError(err.message)
     } finally {
       setLoading(false)
