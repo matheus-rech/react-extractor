@@ -1,0 +1,40 @@
+[
+  {
+    "id": 1,
+    "filename": "sample.pdf",
+    "page": 1,
+    "box": [100, 200, 450, 280],
+    "comment": "Example annotation - Replace this with your real data",
+    "extracted_text": "This is sample extracted text from the PDF. Your actual extraction data will appear here.",
+    "schema_field": "patient_demographics_total_n",
+    "extracted_value": "Sample Value",
+    "confidence": 0.95,
+    "extraction_metadata": {
+      "timestamp": "2025-10-30T00:00:00Z",
+      "extractor": "sample-data-generator",
+      "page_dimensions": {
+        "width": 612,
+        "height": 792
+      }
+    }
+  },
+  {
+    "id": 2,
+    "filename": "sample.pdf",
+    "page": 1,
+    "box": [100, 350, 450, 420],
+    "comment": "Another example annotation",
+    "extracted_text": "More sample text demonstrating the annotation system.",
+    "schema_field": "study_design",
+    "extracted_value": "Retrospective cohort study",
+    "confidence": 0.92,
+    "extraction_metadata": {
+      "timestamp": "2025-10-30T00:01:00Z",
+      "extractor": "sample-data-generator",
+      "page_dimensions": {
+        "width": 612,
+        "height": 792
+      }
+    }
+  }
+]
