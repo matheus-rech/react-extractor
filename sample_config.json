@@ -1,0 +1,50 @@
+{
+  "files_to_process": [
+    {
+      "filename": "Jauss_2006.pdf",
+      "annotations": [
+        {
+          "id": 1,
+          "page": 3,
+          "box": [102, 315, 450, 360],
+          "comment": "Patient demographics section"
+        },
+        {
+          "id": 2,
+          "page": 4,
+          "box": [85, 420, 520, 485],
+          "comment": "Primary outcome - mRS scores"
+        },
+        {
+          "id": 3,
+          "page": 5,
+          "box": [120, 250, 480, 310],
+          "comment": "Surgical intervention details"
+        },
+        {
+          "id": 4,
+          "page": 6,
+          "box": [95, 180, 505, 235],
+          "comment": "Mortality data"
+        }
+      ]
+    },
+    {
+      "filename": "Chen_2015.pdf",
+      "annotations": [
+        {
+          "id": 5,
+          "page": 2,
+          "box": [110, 390, 470, 445],
+          "comment": "Study design and inclusion criteria"
+        },
+        {
+          "id": 6,
+          "page": 4,
+          "box": [88, 295, 515, 355],
+          "comment": "Complications following SDC"
+        }
+      ]
+    }
+  ]
+}
