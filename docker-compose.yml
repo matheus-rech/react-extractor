@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  pdf-viewer:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: pdf-provenance-viewer
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+    volumes:
+      # Mount your data directory (optional - for easy data updates)
+      - ./public/data.json:/usr/share/nginx/html/data.json:ro
+      - ./public:/usr/share/nginx/html/pdfs:ro
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    environment:
+      - NODE_ENV=production
+
+# Usage:
+# docker-compose up -d         # Start in background
+# docker-compose logs -f       # View logs
+# docker-compose down          # Stop and remove
+# docker-compose restart       # Restart service
