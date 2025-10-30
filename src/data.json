@@ -1,0 +1,116 @@
+[
+  {
+    "id": 1,
+    "filename": "Jauss_2006.pdf",
+    "page": 3,
+    "box": [102, 315, 450, 360],
+    "comment": "Patient demographics section",
+    "extracted_text": "A total of 134 consecutive patients with space-occupying cerebellar infarction were retrospectively analyzed. Mean age was 68.5 ± 12.3 years (range 42-89 years), with 72 male and 62 female patients.",
+    "schema_field": "patient_demographics_total_n",
+    "extracted_value": "134",
+    "confidence": 0.98,
+    "extraction_metadata": {
+      "timestamp": "2025-10-30T14:23:45Z",
+      "extractor": "claude-sonnet-4-20250514",
+      "page_dimensions": {
+        "width": 612,
+        "height": 792
+      }
+    }
+  },
+  {
+    "id": 2,
+    "filename": "Jauss_2006.pdf",
+    "page": 4,
+    "box": [85, 420, 520, 485],
+    "comment": "Primary outcome - mRS scores",
+    "extracted_text": "At 90-day follow-up, functional outcomes were assessed using the modified Rankin Scale (mRS). Good outcome (mRS 0-2) was achieved in 56 patients (41.8%), moderate disability (mRS 3-4) in 48 patients (35.8%), and poor outcome (mRS 5-6) in 30 patients (22.4%).",
+    "schema_field": "outcomes_mRS_90day",
+    "extracted_value": "mRS 0-2: 41.8% (56/134)",
+    "confidence": 0.96,
+    "extraction_metadata": {
+      "timestamp": "2025-10-30T14:24:12Z",
+      "extractor": "claude-sonnet-4-20250514",
+      "page_dimensions": {
+        "width": 612,
+        "height": 792
+      }
+    }
+  },
+  {
+    "id": 3,
+    "filename": "Jauss_2006.pdf",
+    "page": 5,
+    "box": [120, 250, 480, 310],
+    "comment": "Surgical intervention details",
+    "extracted_text": "Suboccipital decompressive craniectomy (SDC) was performed in 89 patients (66.4%) with a mean time from symptom onset to surgery of 28.6 ± 14.2 hours. Conservative management was pursued in 45 patients (33.6%).",
+    "schema_field": "intervention_SDC_rate",
+    "extracted_value": "66.4% (89/134)",
+    "confidence": 0.97,
+    "extraction_metadata": {
+      "timestamp": "2025-10-30T14:24:45Z",
+      "extractor": "claude-sonnet-4-20250514",
+      "page_dimensions": {
+        "width": 612,
+        "height": 792
+      }
+    }
+  },
+  {
+    "id": 4,
+    "filename": "Jauss_2006.pdf",
+    "page": 6,
+    "box": [95, 180, 505, 235],
+    "comment": "Mortality data",
+    "extracted_text": "Overall in-hospital mortality was 18.7% (25/134). Mortality in the SDC group was significantly lower at 12.4% (11/89) compared to 31.1% (14/45) in the conservative management group (p < 0.01).",
+    "schema_field": "outcomes_mortality_overall",
+    "extracted_value": "18.7% (25/134)",
+    "confidence": 0.99,
+    "extraction_metadata": {
+      "timestamp": "2025-10-30T14:25:18Z",
+      "extractor": "claude-sonnet-4-20250514",
+      "page_dimensions": {
+        "width": 612,
+        "height": 792
+      }
+    }
+  },
+  {
+    "id": 5,
+    "filename": "Chen_2015.pdf",
+    "page": 2,
+    "box": [110, 390, 470, 445],
+    "comment": "Study design and inclusion criteria",
+    "extracted_text": "This prospective cohort study included 78 patients with space-occupying cerebellar infarction admitted between January 2010 and December 2014. Inclusion criteria: (1) acute cerebellar infarction with mass effect, (2) National Institutes of Health Stroke Scale (NIHSS) score ≥10, (3) Glasgow Coma Scale (GCS) score ≤13.",
+    "schema_field": "inclusion_criteria",
+    "extracted_value": "NIHSS ≥10, GCS ≤13",
+    "confidence": 0.94,
+    "extraction_metadata": {
+      "timestamp": "2025-10-30T14:26:03Z",
+      "extractor": "claude-sonnet-4-20250514",
+      "page_dimensions": {
+        "width": 612,
+        "height": 792
+      }
+    }
+  },
+  {
+    "id": 6,
+    "filename": "Chen_2015.pdf",
+    "page": 4,
+    "box": [88, 295, 515, 355],
+    "comment": "Complications following SDC",
+    "extracted_text": "Post-operative complications in the SDC group included: cerebrospinal fluid leak (n=7, 12.5%), wound infection (n=4, 7.1%), hydrocephalus requiring ventriculoperitoneal shunt (n=9, 16.1%), and rebleeding (n=2, 3.6%). No cases of cerebellar necrosectomy were performed.",
+    "schema_field": "complications_SDC",
+    "extracted_value": "CSF leak: 12.5%, infection: 7.1%, hydrocephalus: 16.1%",
+    "confidence": 0.93,
+    "extraction_metadata": {
+      "timestamp": "2025-10-30T14:26:48Z",
+      "extractor": "claude-sonnet-4-20250514",
+      "page_dimensions": {
+        "width": 612,
+        "height": 792
+      }
+    }
+  }
+]
